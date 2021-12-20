@@ -1,0 +1,19 @@
+//require app configurations
+require("../.config/config.js");
+
+const app = require("../app");
+const http = require("http");
+const utility = require("../helpers/utility");
+
+var port = utility.normalizePort(
+  process.env.PORT || global.config.app.express_port
+);
+app.set("port", port);
+
+const server = http.createServer(app);
+
+server.listen(port);
+server.on("listening", () => {
+  require("../database");
+  console.log(`Server is listening on port ${port}`);
+});

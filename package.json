@@ -2,10 +2,25 @@
   "name": "expressmongodbstarter",
   "version": "1.0.0",
   "description": "this is just a starter repo for express and mongodb api",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "./node_modules/.bin/mocha tests",
+    "testing": "./node_modules/.bin/mocha tests -w"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Anil Khadka",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.1.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.15"
+  }
 }

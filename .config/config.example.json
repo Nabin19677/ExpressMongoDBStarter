@@ -1,0 +1,32 @@
+{
+  "development": {
+    "config_id": "development",
+    "app": {
+      "express_port": 3000
+    },
+    "database": {
+      "mongodb": {
+        "uri": "mongodb://localhost:27017/myapp",
+        "hostname": "localhost:27017",
+        "user_name": "",
+        "password": "",
+        "db_name": "myapp"
+      }
+    }
+  },
+  "<env-name>": {
+    "config_id": "<env-name>",
+    "app": {
+      "express_port": "<env-port>"
+    },
+    "database": {
+      "mongodb": {
+        "uri": "<mongo-uri>",
+        "hostname": "<mongo-hostname>",
+        "user_name": "<mongo-username>",
+        "password": "<mongo-password>",
+        "db_name": "<mongo-db_name>"
+      }
+    }
+  }
+}
